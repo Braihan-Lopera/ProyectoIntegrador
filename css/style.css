@@ -1,3 +1,53 @@
+.navbar {
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 30px;
+border-bottom: 1px solid #ddd;
+background-color: white;
+
+}
+
+.navbar__logo img {
+height: 30px;
+}
+
+.navbar__menu ul {
+list-style: none;
+display: flex;
+gap: 20px;
+margin: 0;
+padding: 0;
+}
+
+.navbar__menu a {
+text-decoration: none;
+color: black;
+font-weight: bold;
+font-size: 14px;
+}
+
+.navbar__acciones {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.navbar__acciones input {
+padding: 5px 10px;
+width: 120px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+.navbar__acciones img {
+vertical-align: middle;
+cursor: pointer;
+}
+
+
+
 body{
     margin: 0;
 }
