@@ -88,3 +88,4 @@ crearPanel(["imagenes/foto4x1_1.webp","imagenes/foto4x1_2.webp","imagenes/foto4x
 crearPanel(["imagenes/imagenNewDrop.webp"],["about:blank"],"newDropLink")
 
 // fin de la creacion de paneles ------------------------------------------
+
