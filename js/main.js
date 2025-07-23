@@ -7,7 +7,7 @@ const caras = document.querySelectorAll(".cara")
 let index = 0
 let videoPrincipal = null
 
-window.addEventListener("load", () => {
+if (btnAdelante) window.addEventListener("load", () => {
     videoPrincipal = caras[0].querySelector("video")
     if (videoPrincipal) {
         videoPrincipal.loop = true
@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     }
 })
 
-function mostrarCara(i) {
+if (btnAdelante) function mostrarCara(i) {
     caras.forEach(cara => cara.classList.remove("activa"))
     caras[i].classList.add("activa")
     document.querySelector(".caras").style.transform = `translateX(-${i * 100}%)`
@@ -32,12 +32,12 @@ function mostrarCara(i) {
     }
 }
 
-btnAtras.addEventListener("click", () => {
+if (btnAdelante) btnAtras.addEventListener("click", () => {
     index = (index === 0) ? caras.length - 1 : index - 1
     mostrarCara(index)
 })
 
-btnAdelante.addEventListener("click", () => {
+if (btnAdelante) btnAdelante.addEventListener("click", () => {
     index = (index === caras.length - 1) ? 0 : index + 1
     mostrarCara(index)
 })
@@ -83,9 +83,45 @@ const crearPanel = (imagenes,links, contenedorId, nombre) =>{
     
 }
 //         necesita ponerle el link de las paginas
-crearPanel(['imagenes/imagenMujer.webp','imagenes/imagenHombre.webp'],["about:blank","about:blank"],"hombreMujer")
-crearPanel(["imagenes/foto4x1_1.webp","imagenes/foto4x1_2.webp","imagenes/foto4x1_3.webp","imagenes/foto4x1_4.webp"],["about:blank","about:blank","about:blank","about:blank"],"panel4x1",["JEANS PARA MUJER","CAMISAS PARA HOMBRE","CAMISAS PARA MUJER","BERMUDAS PARA HOMBRE"])
-crearPanel(["imagenes/imagenNewDrop.webp"],["about:blank"],"newDropLink")
+if (btnAdelante) crearPanel(['imagenes/imagenMujer.webp','imagenes/imagenHombre.webp'],["about:blank","about:blank"],"hombreMujer")
+if (btnAdelante) crearPanel(["imagenes/foto4x1_1.webp","imagenes/foto4x1_2.webp","imagenes/foto4x1_3.webp","imagenes/foto4x1_4.webp"],["about:blank","about:blank","about:blank","about:blank"],"panel4x1",["JEANS PARA MUJER","CAMISAS PARA HOMBRE","CAMISAS PARA MUJER","BERMUDAS PARA HOMBRE"])
+if (btnAdelante) crearPanel(["imagenes/imagenNewDrop.webp"],["about:blank"],"newDropLink")
 
 // fin de la creacion de paneles ------------------------------------------
+
+
+//creacion de paneles de la seccion de hombres-----------------------
+const contenedor = document.getElementById("contenedorProductos")
+
+const mostrarProductoSeccionHombre = () =>{
+fetch("../data/muestraProductos.json").then(response => response.json()).then(data => {
+    
+        for (let index = 0; index < data.length; index++) {
+            const divProducto = document.createElement("div")
+            divProducto.className = "divProducto"
+
+            const link = document.createElement("a")
+            link.href = "about:blank"
+
+            const portada = document.createElement("img")
+            portada.src = data[index].fotoPortada
+
+            const nombreProducto = document.createElement("p")
+            nombreProducto.textContent = data[index].nombre
+
+            const precioProducto = document.createElement("h4")
+            precioProducto.textContent = "$"+data[index].precio
+
+            divProducto.appendChild(link)
+            link.appendChild(portada)
+            link.appendChild(nombreProducto)
+            link.appendChild(precioProducto) 
+            contenedor.appendChild(divProducto)               
+            
+        }
+        
+    })        
+}
+
+if (contenedor) mostrarProductoSeccionHombre()
 
