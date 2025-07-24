@@ -125,3 +125,6 @@ fetch("../data/muestraProductos.json").then(response => response.json()).then(da
 
 if (contenedor) mostrarProductoSeccionHombre()
 
+    //-------------header de pagina de hombres---------------------
+
+
