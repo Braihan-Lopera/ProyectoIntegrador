@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
 }
 
 .fraseInicial{
@@ -160,3 +161,36 @@ body{
         color: inherit;
     }
 }
+header{
+    margin: 0;
+    padding: 0;
+}
+.headerHombres{
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    gap: 20px;
+    
+    img{
+        width: 100%;
+    }
+    a{
+        width: 8.5%;
+        height: auto;
+        margin:10px;
+    }
+
+}
+
+.apartados{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    a{
+        text-decoration: none;
+    }
+    
+}
+
