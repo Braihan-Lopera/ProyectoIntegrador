@@ -50,7 +50,23 @@ cursor: pointer;
 
 body{
     margin: 0;
+    padding: 0;
 }
+
+.fraseInicial{
+    color: #162450;
+    letter-spacing: 2.8px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+
+    h3{
+        font-family: DINNextLTPro-Regular;
+        font-size: 19px;
+    }
+}
+
+/* ------------ seccion del carrusel ----------------- */
 
 .carrusel{
     display: flex;
@@ -83,12 +99,12 @@ body{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
+    background-color: transparent;
+    color: gray;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .activa{
@@ -97,3 +113,134 @@ body{
 
 #atras{left: 10px;}
 #adelante{right: 10px;}
+
+/* --------------------------------------------------- */
+/* ------------ seccion de los paneles ----------------- */
+
+.panel1x1{
+
+    width: 100%;
+    padding-bottom: 1rem ;
+    padding-top: 2rem ;
+    text-align: center;
+
+    
+    img{
+        width: 70%;
+    }
+
+}
+
+.panel2x1{
+
+    padding-left: 15rem ;
+    padding-right: 15rem ;
+    padding-bottom: 2rem ;
+    padding-top: 2rem ;
+    display: flex;
+    justify-content: space-between;
+
+    a{
+        width: 49.5%;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.panel3x1{
+    
+}
+
+.panel4x1{
+    
+    padding-left: 5rem ;
+    padding-right: 5rem ;
+    padding-bottom: 2rem ;
+    padding-top: 2rem ;
+    display: flex;
+    justify-content: space-between;
+
+    h3{
+        font-family: DINNextLTPro-Light;
+        font-size: .85rem;
+        letter-spacing: .8px;
+        
+    }
+
+    p{
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        
+    }
+    
+    a{
+        width: 24.5%;
+        text-decoration: none;
+        color: inherit;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+/* -------------------------seccion hombres---------------------------- */
+.contenedorProductos{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5rem;
+    height: 100vh;
+    width: 100%;
+}
+
+.divProducto{
+    width: 20%;
+    height: auto;
+    margin:20px;
+    p{margin:0;}
+    h4{margin:0;}
+    height: 600px;
+    
+    img{
+        width: 100%;
+        height: 95%;
+        object-fit: cover;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+header{
+    margin: 0;
+    padding: 0;
+}
+.headerHombres{
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    gap: 20px;
+    
+    img{
+        width: 100%;
+    }
+    a{
+        width: 8.5%;
+        height: auto;
+        margin:10px;
+    }
+
+}
+
+.apartados{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    a{
+        text-decoration: none;
+    }
+    
+}
+
