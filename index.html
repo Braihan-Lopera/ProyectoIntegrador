@@ -3,52 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Uribe | GCO</title>
+    <title>Americanino | Grupo GCO</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <header class="navbar">
-    <div class="navbar__logo">
-    <img src="/imagenes/logoAmericanino.png" alt="Logo Americanino">
-    </div>
-    <nav class="navbar__menu">
-    <ul>
-        <li><a href="#">Hombre</a></li>
-        <li><a href="#">Mujer</a></li>
-        <li><a href="#">Descuentos</a></li>
-        <li><a href="#">Novedades</a></li>
-    </ul>
-    </nav>
-    <div class="navbar__acciones">
-    <input type="text" placeholder="Buscar...">
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" width="20"></a>
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrito" width="20"></a>
-    </div>
-    </header>
+    <header class="navbar" id="main-navbar"></header>
 
-    
-
-
-    <div class="carrusel">
-        <div class="caras">
-            <div class="cara activa">
-                <video muted autoplay playsinline src="./videos/videoCarrusel.mp4"></video>
+    <main>
+        <div class="carrusel">
+            <div class="caras">
+                <div class="cara activa">
+                    <video muted autoplay loop playsinline src="./videos/videoCarrusel2.mp4" poster="./imagenes/poster-video.jpg"></video>
+                </div>
+                <div class="cara">
+                    <img src="./imagenes/imagenCarrusel.webp" alt="Modelo de la nueva colección">
+                </div>
             </div>
-            <div class="cara">
-                <img src="./imagenes/imagenCarrusel.webp" alt="">
-            </div>
+            <button id="atras" aria-label="Anterior">❮</button>
+            <button id="adelante" aria-label="Siguiente">❯</button>
         </div>
-        <button id="atras">❮</button>
-        <button id="adelante">❯</button>
-  </div>
 
-    <div class="fraseInicial">
-        <h1>Tienda de ropa online para mujeres y hombres</h1>
-    </div>
-    <div id="hombreMujer"></div>
-    <div id="panel4x1"></div>
-    <div id="newDropLink"></div>
+        <div class="fraseInicial">
+            <h1>Tienda de ropa online para mujeres y hombres</h1>
+        </div>
+        
+        <div id="hombreMujer"></div>
+        <div id="panel4x1"></div>
+        <div id="newDropLink"></div>
+    </main>
+
+    <footer id="main-footer"></footer>
 
     <script src="./js/main.js"></script>
 </body>
