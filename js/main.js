@@ -1,3 +1,9 @@
+/*plantilla para los productos del json
+
+{"id": , "nombre": "", "precio": "" , "fotoPortada": "", "descripcion": "", "tallas":{},"elementos":[{"color":"", "fotosProducto":[]}], "composicion": "", "paisFabricacion": "", "fabricante" : "", "registroSIC": "", "lavadoSIC": "", "categoria": "", "caracterisiticas":[]}
+
+*/
+
 //inicio del carrusel-----------------------------------
 
 const btnAdelante = document.getElementById("adelante")
@@ -83,14 +89,14 @@ const crearPanel = (imagenes,links, contenedorId, nombre) =>{
     
 }
 //         necesita ponerle el link de las paginas
-if (btnAdelante) crearPanel(['imagenes/imagenMujer.webp','imagenes/imagenHombre.webp'],["about:blank","about:blank"],"hombreMujer")
+if (btnAdelante) crearPanel(['imagenes/imagenMujer.webp','imagenes/imagenHombre.webp'],["about:blank","./html/seccionHombres.html"],"hombreMujer")
 if (btnAdelante) crearPanel(["imagenes/foto4x1_1.webp","imagenes/foto4x1_2.webp","imagenes/foto4x1_3.webp","imagenes/foto4x1_4.webp"],["about:blank","about:blank","about:blank","about:blank"],"panel4x1",["JEANS PARA MUJER","CAMISAS PARA HOMBRE","CAMISAS PARA MUJER","BERMUDAS PARA HOMBRE"])
 if (btnAdelante) crearPanel(["imagenes/imagenNewDrop.webp"],["about:blank"],"newDropLink")
 
 // fin de la creacion de paneles ------------------------------------------
 
 
-//creacion de paneles de la seccion de hombres-----------------------
+//-------------------creacion de paneles de la seccion de hombres-----------------------
 const contenedor = document.getElementById("contenedorProductos")
 
 const mostrarProductoSeccionHombre = () =>{

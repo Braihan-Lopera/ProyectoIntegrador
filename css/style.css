@@ -137,18 +137,20 @@ body{
 .contenedorProductos{
     display: flex;
     flex-wrap: wrap;
-    padding: 5rem;
+    padding: 0px;
     height: 100vh;
     width: 100%;
 }
 
 .divProducto{
-    width: 20%;
+    width: 22%;
     height: auto;
     margin:20px;
+    height: 400px;
+
     p{margin:0;}
     h4{margin:0;}
-    height: 600px;
+    
     
     img{
         width: 100%;
